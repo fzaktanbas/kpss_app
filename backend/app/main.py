@@ -1,7 +1,11 @@
 from fastapi import FastAPI
 from sqlalchemy import text
 
-from app.database import engine
+from app.database import Base, engine
+from app.models.exam_type import ExamType
+from app.models.subject import Subject
+
+Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
 
