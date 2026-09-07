@@ -4,8 +4,8 @@ from sqlalchemy.orm import relationship
 from app.database import Base
 
 
-class ExamType(Base):
-    __tablename__ = "exam_types"
+class TestGroup(Base):
+    __tablename__ = "test_groups"
 
     id = Column(Integer, primary_key=True, index=True)
 
@@ -17,5 +17,5 @@ class ExamType(Base):
 
     exam_type_subjects = relationship(
         "ExamTypeSubject",
-        back_populates="exam_type"
+        back_populates="test_group"
     )

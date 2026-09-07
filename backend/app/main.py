@@ -4,6 +4,9 @@ from sqlalchemy import text
 from app.database import Base, engine
 from app.models.exam_type import ExamType
 from app.models.subject import Subject
+from app.models.test_group import TestGroup
+from app.models.exam_type_subject import ExamTypeSubject
+from app.models.topic import Topic
 
 Base.metadata.create_all(bind=engine)
 
